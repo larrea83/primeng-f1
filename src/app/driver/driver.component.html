@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <label>{{'COMMON.SELECT-YEAR' | translate }}</label>
+    <p-dropdown [options]="seasonYears" [(ngModel)]="selectedSeason" (onChange)="seasonSelected(event)"></p-dropdown>    
+  </div>
+  <div class="panel-body">
+    <p-dataTable [value]="driverList" selectionMode="single" [(selection)]="selectedDriver" 
+      (onRowSelect)="onDriveSelect($event)" (onRowUnselect)="onDriveUnselect($event)" >
+      <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header" [sortable]="col.sortable"></p-column>
+    </p-dataTable>
+  </div>
+</div>
+
+<div *ngIf="displayDriverDetails">
+<p-dialog [(visible)]="displayDriverDetails" 
+  header="{{'COMMON.DETAILS-OF' | translate:{driverSurname:selectedDriver.givenName + ' ' + selectedDriver.familyName } | uppercase }}"
+  [width]="600" [height]="600" [modal]="true" [resizable]="true" >
+    <p-header>
+      
+    </p-header>
+    <driver-detail [selectedDriver]=selectedDriver></driver-detail>
+    <!--
+    <p-footer>
+        <div class="ui-dialog-buttonpane ui-helper-clearfix">
+            //buttons
+        </div>
+    </p-footer>
+    -->
+</p-dialog>
+</div>
+

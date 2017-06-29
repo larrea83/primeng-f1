@@ -1,0 +1,11 @@
+
+<span>{{'BASE.IDIOM' | translate}}</span>
+<select #langSelect (change)="languageChanged(langSelect.value) " >
+    <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+</select>
+
+<p-menu #menu popup="popup" [model]="menuItems"></p-menu>
+<button type="button" pButton icon="fa fa-list" label="{{ 'BASE.MENU' | translate }}" (click)="menu.toggle($event)"></button>
+<br>
+<br><br>
+<router-outlet></router-outlet>

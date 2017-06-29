@@ -1,0 +1,40 @@
+{
+  "BASE":{
+    "IDIOM": "Seleccione idioma:",
+    "MENU": "Menú",
+    "DRIVERS": "Pilotos",
+    "CONSTRUCTORS": "Constructores",
+    "CIRCUITS": "Circuitos"
+  }
+  ,"COMMON":{
+    "SELECT-YEAR": "Seleccione un año:",
+    "DETAILS-OF": "Detalles de {{driverSurname}}"
+  }
+  ,"DRIVER":{
+    "CODE":"Código",
+    "NAME":"Nombre",
+    "SURNAME":"Apellidos",
+    "NUMBER":"Dorsal",
+    "NATIONALITY":"Nacionalidad",
+    "BIRTHDATE":"F. Nacimiento"
+  }
+  ,"CHARACTERS": {
+    "TITLE": "LISTA DE PERSONAJES ({{numCharacters}} PERSONAJES) {{other}}"
+  }
+  ,"CASENET-FORM":{
+    "NAME":"Nombre",
+    "SURNAME":"Apellidos",
+    "BIRTHDATE":"Día de nacimiento",
+    "GENDER":"Género",
+    "EMAIL":"Email",
+    "ACCEPT_TERMS":"Aceptar términos",
+    "SUBMIT":"Enviar",
+    "FEMALE": "Mujer",
+    "MALE":"Hombre"
+  }
+  ,"ERRORS":{
+    "FIELD_REQUIRED":"Campo requerido",
+    "IS_EMAIL":"Dirección de email no válida",
+    "MIN_LENGHT":"Este campo requiere 2 caracteres mínimo"
+  }
+}

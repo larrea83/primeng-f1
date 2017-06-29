@@ -1,0 +1,40 @@
+{
+  "BASE":{
+    "IDIOM": "Select language:",
+    "MENU": "Menu",
+    "DRIVERS": "Pilots",
+    "CONSTRUCTORS": "Constructors",
+    "CIRCUITS": "Circuits"
+  }
+  ,"COMMON":{
+    "SELECT-YEAR": "Select a year:",
+    "DETAILS-OF": "Details of {{driverSurname}}"
+  }
+  ,"DRIVER":{
+    "CODE":"Code",
+    "NAME":"Name",
+    "SURNAME":"Surname",
+    "NUMBER":"Number",
+    "NATIONALITY":"Nationality",
+    "BIRTHDATE":"Birthdate"
+  }
+  ,"CHARACTERS": {
+    "TITLE": "CHARACTERS LIST ({{numCharacters}} CHARACTERS) {{other}}"
+  }
+  ,"CASENET-FORM":{
+    "NAME":"Name",
+    "SURNAME":"Surname",
+    "BIRTHDATE":"Birthdate",
+    "GENDER":"Gendre",
+    "EMAIL":"Email",
+    "ACCEPT_TERMS":"Accept tems",
+    "SUBMIT":"Submit",
+    "FEMALE": "Female",
+    "MALE":"Male"
+  }
+  ,"ERRORS":{
+    "FIELD_REQUIRED":"This field is required",
+    "IS_EMAIL":"This field is not a valid email",
+    "MIN_LENGHT":"This field requires 2 characters"
+  }
+}
