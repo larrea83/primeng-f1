@@ -28,11 +28,13 @@ import { routes } from './routing';
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: Http) {
     return new TranslateHttpLoader(http);
+    //return new TranslateHttpLoader(http, "/public/lang-files/", "-lang.json");
 }
 
 // services
 import { LanguageService } from '../services/language.service';
 import { DriverService } from '../services/driver.service';
+import { LabelService } from '../services/label.service';
 
 // components
 import { BaseComponent } from './base/base.component';
@@ -55,9 +57,10 @@ import { DriverDetailComponent } from './driver-detail/driver-detail.component';
     MaterialImportsModule,
     TranslateModule.forRoot({
       /*
-        loader: { provide: TranslateLoader, useClass: CasenetTranslationLoader},
-          missingTranslationHandler: {provide: MissingTranslationHandler, useClass: CasenetMissingTranslationHandler}
+        loader: { provide: TranslateLoader, useClass: CasenetTranslationLoader, deps: [Http, LabelService]},
+        missingTranslationHandler: {provide: MissingTranslationHandler, useClass: CasenetMissingTranslationHandler}
       */
+      
         loader: {
           provide: TranslateLoader
           ,useFactory: HttpLoaderFactory
@@ -65,10 +68,10 @@ import { DriverDetailComponent } from './driver-detail/driver-detail.component';
         }
         
         ,missingTranslationHandler: {provide: MissingTranslationHandler, useClass: CasenetMissingTranslationHandler}
-        
+      
       })
   ],
-  providers: [LanguageService, DriverService],
+  providers: [LanguageService, DriverService, LabelService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

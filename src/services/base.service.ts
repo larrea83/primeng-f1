@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import { Base } from '../model/base';
 
 @Injectable()
 export class BaseService {
@@ -14,5 +13,15 @@ export class BaseService {
         let headers = new Headers();
         headers.append('Accept', 'application/json');
         return headers;
+    }
+
+    /**
+     * 
+     * @param error 
+     */
+    public handleError(error: Response) {
+        console.error(error);
+        let message = `Error status code ${error.status} at ${error.url}`;
+        return Observable.throw(message);
     }
 }

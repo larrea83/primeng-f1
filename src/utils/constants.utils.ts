@@ -1,11 +1,14 @@
 import { SelectItem } from 'primeng/primeng';
 
 export class Constants {
-    public static BASE_URL: string = 'http://ergast.com/api/f1';
-    public static DRIVER_TAG: string = '/drivers';
-    public static JSON_ENDING: string = '.json';
+        public static DRIVER_TAG: string = "/drivers";
 
-    public static DEFAULT_LANGUAGE: string = 'en';
+    public static BASE_ENDPOINT: string = "http://ergast.com/api/f1";
+    public static DRIVERS_ENDPOINT: string = Constants.BASE_ENDPOINT + Constants.DRIVER_TAG;
+
+
+    public static JSON_EXTENSION: string = ".json";
+    public static DEFAULT_LANGUAGE: string = "es";
 
 
     public static YEARS: SelectItem[] = [

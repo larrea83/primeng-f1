@@ -1,17 +1,12 @@
 import { Observable } from 'rxjs/Rx';
 import { TranslateLoader } from '@ngx-translate/core';
-import * as fs from 'fs-access';
+import { Http, Response } from '@angular/http';
+import { LabelService } from '../services/label.service';
 
 export class CasenetTranslationLoader implements TranslateLoader {
-    constructor() {}
+    constructor(public http: Http, public labelService:LabelService) { }
 
     getTranslation(lang: string): Observable<any> {
-        console.log(lang);
-        //var fs = require('fs');
-        
-        return Observable.create(observer => {
-            observer.next(JSON.parse(fs.readFileSync(`src/i18n/${lang}.json`, 'utf8')));
-            observer.complete();
-        });
+        return this.labelService.getLabels().map((response:Response) => response);
     }
 }

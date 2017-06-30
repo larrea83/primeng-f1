@@ -13,7 +13,7 @@ export abstract class Base{
      * @param data Base object to extract the ID
      */
     public extractId(data: Base) {
-        let extractedId = data.url.replace(Constants.BASE_URL + '/' + data.getEntityName() + '/', '').replace('/', '');
+        let extractedId = data.url.replace(Constants.BASE_ENDPOINT + '/' + data.getEntityName() + '/', '').replace('/', '');
         return parseInt(extractedId);
     }
 }
